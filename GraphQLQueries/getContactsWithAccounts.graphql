@@ -1,0 +1,32 @@
+# Getting parent accounts
+query getContactsWithAccounts {
+  uiapi {
+    query {
+      Contact {
+        edges {
+          node {
+            Id
+            Name {
+              value
+            }
+            Email {
+              value
+            }
+            Account {
+              Name {
+                value
+              }
+              AnnualRevenue {
+                value
+                displayValue
+              }
+              Rating {
+                value
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
+}

@@ -1,0 +1,44 @@
+# Getting child objects Parent to child
+# Getting parent accounts
+# Cannot have filter on Parent Account
+query getContactsWithAccountsAndCases {
+  uiapi {
+    query {
+      Contact {
+        edges {
+          node {
+            Id
+            Name {
+              value
+            }
+            Email {
+              value
+            }
+            Cases (first : 1 ){
+              edges {
+                node {
+                  Id
+                  CaseNumber{
+                    value
+                  }
+                }
+              }
+            }
+            Account {
+              Name {
+                value
+              }
+              AnnualRevenue {
+                value
+                displayValue
+              }
+              Rating {
+                value
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
+}

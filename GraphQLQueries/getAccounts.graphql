@@ -1,0 +1,46 @@
+# Getting Accounts using variables and query filters
+query getAccounts( 
+  $limit : Int,
+  $likeParam: String,
+  $revenue : Currency
+) {
+  uiapi {
+    query {
+      Account(
+        after: null
+        first: $limit, 
+        where : { 
+          and : [
+           { Name : { like: $likeParam} }, 
+            { AnnualRevenue : { lt: $revenue} } 
+          ]
+          }
+        orderBy : { AnnualRevenue : { order : ASC }, Name : { order : ASC}}
+      ){
+        edges {
+          node {
+            Id
+            Industry {
+              value
+              displayValue
+            }
+            Name {
+              value
+            }
+            AnnualRevenue {
+              value
+              displayValue
+            }
+          }
+        }
+        totalCount
+        pageInfo {
+          hasNextPage
+          hasPreviousPage
+          endCursor
+          startCursor
+        }
+      }
+    }
+  }
+}

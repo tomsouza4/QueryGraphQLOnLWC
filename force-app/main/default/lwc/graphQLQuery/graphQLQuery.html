@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="GraphQL Query" icon-name="custom:custom55">
+
+        <lightning-spinner variant="brand" size="small" if:true={isLoading}></lightning-spinner>
+
+        <div class="slds-var-m-around_large">
+            <lightning-input type="search" placeholder="search contacts with name" label="Search Contacts" onchange={handleChange}></lightning-input>
+        </div>
+        <div class="slds-var-m-around_large">
+            <lightning-datatable key-field="Id" columns={columnsList} data={dataList}></lightning-datatable>
+        </div>
+        <p class="slds-text-align_center slds-var-p-top_medium" style="color:lightseagreen"> 
+            displaying {pageNumber}/{totalPages} from total records {totalCount}.
+        </p>
+        <div class="slds-var-m-around_large">
+            <lightning-button variant="brand" icon-name="utility:bug" onclick={handleReset} disabled={hasPreviousPg}></lightning-button>
+            <lightning-button variant="brand" icon-name="utility:chevronright" onclick={handleNext} disabled={disabledButton}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

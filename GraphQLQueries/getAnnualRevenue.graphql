@@ -1,0 +1,40 @@
+# Welcome to Altair GraphQL Client.
+# You can send your request using CmdOrCtrl + Enter.
+
+# Enter your graphQL query here.
+query getAnnualRevenue {
+  uiapi {
+    aggregate {
+      Account (groupBy : { Industry: { group: true}, Type: {group: true} },
+      first: 10,
+      ){
+        edges {
+          node {
+            aggregate {
+              Type {
+                value
+              }
+              Industry {
+                value
+              }
+              AnnualRevenue {
+                sum {
+                  value
+                }
+                min {
+                  value
+                }
+                max {
+                  value
+                }
+                avg {
+                  value
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
