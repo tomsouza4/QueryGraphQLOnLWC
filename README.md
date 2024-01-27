@@ -16,7 +16,7 @@ This file contains the JavaScript code for the GraphQLQuery Lightning Web Compon
 
 #### Features:
 
-- Pagination forward and backward using GraphQL cursors.
+- Pagination forward and reset page # using GraphQL cursors.
 - Dynamically updating datatable with queried data.
 - Search functionality to filter contacts by name.
 
@@ -26,9 +26,9 @@ This file contains the HTML template for the GraphQLQuery Lightning Web Componen
 
 #### Features:
 
-- Lightning Spinner to indicate loading state.
 - Lightning Datatable to display queried contacts.
 - Pagination buttons to navigate through pages of contacts.
+- Lightning Spinner to indicate loading state.
 
 ## How to Use
 
