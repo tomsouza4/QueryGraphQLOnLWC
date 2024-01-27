@@ -35,16 +35,16 @@ This file contains the HTML template for the GraphQLQuery Lightning Web Componen
 1. Clone the repository to your local machine: 
 
 ```bash
-git clone https://github.com/tomsouza4/GraphQLQueryOnLWC.git
+git clone https://github.com/tomsouza4/QueryGraphQLOnLWC.git
 ```
 
 # Output Sample
 Demo on how the App works:
-<!-- <div align="left">
+<div align="left">
       <a href="https://www.youtube.com/watch?v=QtJvsQmGQ-c">
          <img src="https://img.youtube.com/vi/QtJvsQmGQ-c/maxresdefault.jpg" style="width:100%;">
       </a>
-</div> -->
+</div>
 
 <!-- [![Watch the video](https://img.youtube.com/vi/<VIDEO_ID>/hqdefault.jpg)](https://www.youtube.com/embed/<VIDEO_ID>)
 
@@ -52,7 +52,7 @@ Demo on how the App works:
 />](https://www.youtube.com/embed/QtJvsQmGQ-c) -->
 
 
-{% include youtube.html id="QtJvsQmGQ-c" %}
+<!-- {% include youtube.html id="QtJvsQmGQ-c" %} -->
 
 # Important Note
 In this app theres no pagination backwards and this is due to current limitation on Salesforce GraphQL API. Which is currently in GA as Jan/2024.
